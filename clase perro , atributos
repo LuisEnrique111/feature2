@@ -9,42 +9,31 @@ package clase1;
  *
  * @author Lab03
  */
-public class Perro {
+public class Clase1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     
     
-    String raza;
-    String color;
-    double tamaño;
-    double peso;
-    int edad;
-
-public void morder() {
-   
-    System.out.println("el teva a morder");
+    Perro perrito1 = new Perro();
+        perrito1.raza = "chusco";
+        perrito1.color = "negro";
+        perrito1.tamaño = 100;
+        perrito1.peso = 3 ;
+        perrito1.edad = 3 ;
+        perrito1.morder();
+        perrito1.dormir();
+        perrito1.ingresarDatos();
+        perrito1.mostrarDatos();
+        
+    
+  
     }
-
- public void dormir() {
-     System.out.println("el perro esta dormiendo");      
-    }
-
-   public void mostrarDatos(){
-        System.out.println("la raza es "+raza);
-        System.out.println("el color es "+color);
-        System.out.println("el tamaño es "+tamaño);
-        System.out.println("el peso es "+peso);
-        System.out.println("la edad  es "+edad);
-        }
+    
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -56,35 +45,46 @@ public void morder() {
  */
 package clase1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Lab03
  */
 public class Perro {
-    
-    
+
     String raza;
     String color;
     double tamaño;
     double peso;
     int edad;
 
-public void morder() {
-   
-    System.out.println("el teva a morder");
+    public void morder() {
+
+        System.out.println("el teva a morder");
     }
 
- public void dormir() {
-     System.out.println("el perro esta dormiendo");      
+    public void dormir() {
+        System.out.println("el perro esta dormiendo");
     }
 
-   public void mostrarDatos(){
-        System.out.println("la raza es "+raza);
-        System.out.println("el color es "+color);
-        System.out.println("el tamaño es "+tamaño);
-        System.out.println("el peso es "+peso);
-        System.out.println("la edad  es "+edad);
-        }
+    public void mostrarDatos() {
+        System.out.println("la raza es " + raza);
+        System.out.println("el color es " + color);
+        System.out.println("el tamaño es " + tamaño);
+        System.out.println("el peso es " + peso);
+        System.out.println("la edad  es " + edad);
+    }
+    
+public void ingresarDatos() {
+        raza = JOptionPane.showInputDialog("Ingresar la raza");
+        color = JOptionPane.showInputDialog("Ingresar el color");
+        tamaño= Integer.parseInt(JOptionPane.showInputDialog("Ingresar el tamaño"));
+        peso = Integer.parseInt(JOptionPane.showInputDialog("Ingresar el peso"));
+        edad = Integer.parseInt(JOptionPane.showInputDialog("Ingresar la edad"));
+            
+    }
+    
 }
 
 
